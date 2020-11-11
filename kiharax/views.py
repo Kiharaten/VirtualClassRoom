@@ -18,8 +18,8 @@
     # weight      -> /kiharax/weight/
     # description -> /kiharax/description/
 
-from django.http import HttpResponse, Http404
-# from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render
+
 profile = {
     "name" : "Hi, my name is Sora Kihara.",
     "gender" : "Yeah, my gender is men.",
@@ -28,27 +28,27 @@ profile = {
     "weight" : "sure, my weight is about 55kg.",
 }
 
-
 def index(request):
-    return HttpResponse("Hello, world. You're at the kiharax index.")
+    response = "Hello, world. You're at the kiharax index."
+    return render(request, 'kiharax/index.html', {'response': response})
 
 def name(request):
-    return HttpResponse(profile["name"])
+    return render(request, 'kiharax/response.html', {'response':profile["name"]})
 
 def gender(request):
-    return HttpResponse(profile["gender"])
+    return render(request, 'kiharax/response.html', {'response':profile["gender"]})
 
 def age(request):
-    return HttpResponse(profile["age"])
+    return render(request, 'kiharax/response.html', {'response':profile["age"]})
 
 def height(request):
-    return HttpResponse(profile["height"])
+    return render(request, 'kiharax/response.html', {'response':profile["height"]})
 
 def weight(request):
-    return HttpResponse(profile["weight"])
+    return render(request, 'kiharax/response.html', {'response':profile["weight"]})
 
 def description(request):
     description = ""
     for value in profile.values():
         description = description + value + " "
-    return HttpResponse(description)
+    return render(request, 'kiharax/response.html', {'response': description})    
