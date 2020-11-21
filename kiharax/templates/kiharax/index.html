@@ -12,8 +12,8 @@
 
     <title>Document</title>
 </head>
-<body>
-    <header class="navbar navbar-expand-lg navbar-light bg-light">
+<body class="bg-primary">
+    <header class="navbar navbar-expand-lg navbar-dark bg-primary">
         <h1 class="navbar-brand" >page of index in kiharax.</h1>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,8 +32,8 @@
         </nav>
     </header>
 
-    <main class="container-fluid">
-        <p>{{ response }}</p>
+    <main class="container-fluid bg-light p-2">
+        <p class="alert alert-success" role="alert">{{ response }}</p>
         <p>
         インターネットでは、「インターネット・プロトコル・スイート」（あるいは「TCP/IPプロトコル・スイート」）と呼ばれる、
         一種の標準化された通信プロトコルと概念モデル（OSI参照モデル）を組み合わせて明確に提供することで、
@@ -82,11 +82,12 @@
         インターネット・プロトコル・スイートという技術（の一部）を用いているものの、あくまで社内など組織内にあるネットワーク、社内の部分に焦点を当てた場合はイントラネットと呼ぶ。複数のイントラネットを相互接続したものをエクストラネットとも呼ぶ。
         インターネット技術には、例えば電子メールやウェブ（World Wide Web、ハイパーテキスト形式で文書・写真・映像・音声 等々等々を転送・表示する仕組み）[2]など、さまざまな技術が含まれている。
         </p>
-
     </main>
 
-    <footer>
-        <p><small>Hi. I'm footer that protect foot of this page!</small></p>
+    <footer class="footer p-2 bg-primary">
+        <div class="container">
+            <p><small class="text-white">Hi. I'm footer that protect foot of this page!</small></p>
+        </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
