@@ -1,0 +1,57 @@
+/* constant(safe-area-inset-top) */
+/* constant(safe-area-inset-right) */
+/* constant(safe-area-inset-bottom) */
+/* constant(safe-area-inset-left) */
+
+/* iphoneの切り欠きを避けるようにしてるやつ */
+footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    height: 25vw;
+    width: 100vw;
+    color: white;
+    padding-bottom: constant(safe-area-inset-bottom);
+
+    z-index: 10000;
+}
+
+footer .contents {
+    position: absolute;
+
+    display: flex;
+    justify-content: space-between;
+
+    top: 0px;
+    left: 0px;
+
+    height: 50%;
+    width: 100%;
+}
+
+footer .contents navi {
+    display: flex;
+    width: 100%;
+}
+
+footer .contents .button {
+    font-size: 50px;
+    line-height: 50px;
+
+    width: 15%;
+
+    margin: 0% 5%;
+    padding: 4%;
+
+    text-align: center;
+    color: white;
+}
+
+footer,
+footer .contents,
+footer .contents navi,
+footer .contents .button
+{
+    background-color: rgba(0,0,255,0.3);
+    background-color: rgba(100,100,100,1);
+}

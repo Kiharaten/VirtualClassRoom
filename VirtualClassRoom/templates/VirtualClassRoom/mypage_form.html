@@ -12,57 +12,56 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./images/howl.jpg">
 
     <!-- page design -->
-    {% comment %} <link rel="stylesheet" href="./css/reset.css"> {% endcomment %}
     <link rel="stylesheet" href="{% static "VirtualClassRoom/css/reset.css" %}">
-    {% comment %} <link rel="stylesheet" href="./css/header_template.css"> {% endcomment %}
     <link rel="stylesheet" href="{% static "VirtualClassRoom/css/header_template.css" %}">
-    {% comment %} <link rel="stylesheet" href="./css/footer_template.css"> {% endcomment %}
     <link rel="stylesheet" href="{% static "VirtualClassRoom/css/footer_template.css" %}">
-    {% comment %} <link rel="stylesheet" href="./css/style.css"> {% endcomment %}
-    <link rel="stylesheet" href="{% static "VirtualClassRoom/css/stlye.css" %}">
-    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "VirtualClassRoom/css/mypage.css" %}">
 
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <!-- page script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./js/function.js"></script>
 
     <!-- title -->
-    <title>VirtualClassRoom | login</title>
+    <title>VirtualClassRoom | mypage</title>
 </head>
 <body>
 
     <header>
         <navi class="contents">
             <h1>VirtualClassRoom</h1>
-            <form action="" method="post" id="form">
+            <form action="" method="post" class="form">
                 <button type="submit" value="" name="hogehoge1" class="button">A</button>
                 <button type="submit" value="" name="hogehoge2" class="button">B</button>
                 <button type="submit" value="" name="hogehoge3" class="button">C</button>
                 <button type="submit" value="" name="hogehoge4" class="button">D</button>
             </form>
         </navi>
-        <!-- end of navi -->
     </header>
-    <!-- end of header -->
 
     <main>
-
-        <p>{{ response }}</p>
-
+        <h1>{{ response }}</h1>
+        <p>// ----- ----- ----- ----- -----hogehoge1----- ----- ----- ----- ----- //</p>
+        {% comment %} <p><img src="https://media.giphy.com/media/SVvKg1HOsPVZK/giphy.gif"></p> {% endcomment %}
+        
+        <p><br>
+            ここがページ１です。<br>
+            ボタンのAとリンクしてます。
+        </p><br>
+        {% comment %} <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d840136.4316424426!2d134.85887106070368!3d34.66018441087177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e86b2acc70d7%3A0xa399ff48811f596d!2z5aSn6Ziq5bqc!5e0!3m2!1sja!2sjp!4v1581666550791!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe> {% endcomment %}
+        <p>// ----- ----- ----- ----- -----hogehoge1----- ----- ----- ----- ----- //</p>
     </main>
-    <!-- end of main  -->
 
     <footer>
-        <div class="contents">
-            <form action="" method="post" id="form">
+        <navi class="contents">
+            <form action="" method="post" class="form">
                 <button type="submit" value="" name="hogehoge5" class="button">E</button>
                 <button type="submit" value="" name="hogehoge6" class="button">F</button>
                 <button type="submit" value="" name="hogehoge7" class="button">G</button>
                 <button type="submit" value="" name="hogehoge8" class="button">H</button>
             </form>
-        </div><!-- contents -->
+        </navi>
     </footer>
-    <!-- end of footer -->
 
 <script>
     $(".show").hide();
