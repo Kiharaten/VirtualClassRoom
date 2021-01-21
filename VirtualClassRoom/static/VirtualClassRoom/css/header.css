@@ -43,6 +43,11 @@ header .contents navi {
     width: 50%;
 }
 
+header .contents form {
+    display: flex;
+    width: 50%;
+}
+
 header .contents .button {
     font-size: 50px;
     line-height: 50px;

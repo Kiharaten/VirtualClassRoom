@@ -6,6 +6,7 @@ from django.http import HttpResponse
 response = {
     "title" : "",
     "h1" : "",
+    "page_name": "",
 }
 
 def index(request):
@@ -23,37 +24,33 @@ def login(request):
 def mypage(request):      # removed user_id
     response["title"] = "VirtualClassRoom | mypage"
     response["h1"] = "test_user1"
-    
+
     return render(request, 'VirtualClassRoom/mypage.html', response)
 
-def mypage2(request):      # removed user_id
-    response["title"] = "VirtualClassRoom | welcome"
-    response["h1"] = "view page index"
-    response = "test_user2"
-    return render(request, 'VirtualClassRoom/mypage.html', {'response' : response})
+def A(request):
+    response["title"] = "VirtualClassRoom | mypage"
+    response["h1"] = "test_user1"
+    response["page_name"] = "pageA"
 
-def mypage3(request):      # removed user_id
-    response["title"] = "VirtualClassRoom | welcome"
-    response["h1"] = "view page index"
-    response = "test_user3"
-    return render(request, 'VirtualClassRoom/mypage.html', {'response' : response})
+    return render(request, 'VirtualClassRoom/mypage.html', response)
 
-def mypage4(request):      # removed user_id
-    response["title"] = "VirtualClassRoom | welcome"
-    response["h1"] = "view page index"
-    response = "form_user1"
-    return render(request, 'VirtualClassRoom/mypage_form.html', {'response' : response})
+def B(request):
+    response["title"] = "VirtualClassRoom | mypage"
+    response["h1"] = "test_user1"
+    response["page_name"] = "pageB"
 
-def mypage5(request):      # removed user_id
-    response["title"] = "VirtualClassRoom | welcome"
-    response["h1"] = "view page index"
-    response = "form_user2"
-    return render(request, 'VirtualClassRoom/mypage_form.html', {'response' : response})
+    return render(request, 'VirtualClassRoom/mypage.html', response)
 
-def mypage6(request):      # removed user_id
-    response["title"] = "VirtualClassRoom | welcome"
-    response["h1"] = "view page index"
-    response = "form_user3"
-    return render(request, 'VirtualClassRoom/mypage_form.html', {'response' : response})
+def C(request):
+    response["title"] = "VirtualClassRoom | mypage"
+    response["h1"] = "test_user1"
+    response["page_name"] = "pageC"
 
- 
+    return render(request, 'VirtualClassRoom/mypage.html', response)
+
+def D(request):
+    response["title"] = "VirtualClassRoom | mypage"
+    response["h1"] = "test_user1"
+    response["page_name"] = "pageD"
+
+    return render(request, 'VirtualClassRoom/mypage.html', response)
