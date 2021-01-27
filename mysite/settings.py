@@ -25,12 +25,13 @@ SECRET_KEY = 'xujujoolm9c49vr=31bjyz#gh1i$#8w=p!cfj_r5gl%=^5gbya'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'VirtualClassRoom.apps.VirtualclassroomConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
