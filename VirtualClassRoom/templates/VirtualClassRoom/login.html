@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    {% comment %} <meta name="viewport" content="width=device-width, initial-scale=1.0"> {% endcomment %}
+    <!-- fit apple PWA -->
+    <meta name="viewport" content="viewport-fit=cover,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="テストサイト">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/howl.jpg">
+
+    <!-- page design -->
+    <link rel="stylesheet" href="{% static "VirtualClassRoom/css/ress.css" %}">
+    <link rel="stylesheet" href="{% static "VirtualClassRoom/css/header.css" %}">
+    <link rel="stylesheet" href="{% static "VirtualClassRoom/css/footer.css" %}">
+    <link rel="stylesheet" href="{% static "VirtualClassRoom/css/mypage.css" %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <!-- page script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/function.js"></script>
+
+    <!-- title -->
+    <title>{{ title }}</title>
+</head>
+<body>
+
+    <header>
+        <navi class="contents">
+            <h1>VirtualClassRoom</h1>
+            <form action="" method="post" id="form">
+                <button type="submit" value="" name="hogehoge1" class="button">A</button>
+                <button type="submit" value="" name="hogehoge2" class="button">B</button>
+                <button type="submit" value="" name="hogehoge3" class="button">C</button>
+                <button type="submit" value="" name="hogehoge4" class="button">D</button>
+            </form>
+        </navi>
+        <!-- end of navi -->
+    </header>
+    <!-- end of header -->
+
+    <main>
+
+        <p>{{ h1 }}</p>
+
+    </main>
+    <!-- end of main  -->
+
+    <footer>
+        <div class="contents">
+            <form action="" method="post" id="form">
+                <button type="submit" value="" name="hogehoge5" class="button">E</button>
+                <button type="submit" value="" name="hogehoge6" class="button">F</button>
+                <button type="submit" value="" name="hogehoge7" class="button">G</button>
+                <button type="submit" value="" name="hogehoge8" class="button">H</button>
+            </form>
+        </div><!-- contents -->
+    </footer>
+    <!-- end of footer -->
+
+<script>
+    $(".show").hide();
+    $(".show").delay(600).fadeIn('slow');
+</script>
+</body>
+</html>
+
+{% comment %} {{ response }} で文字列出力可能 {% endcomment %}
+{% comment %} {% if a == 1 : print("hoge") %} で分岐可能{% endcomment %}

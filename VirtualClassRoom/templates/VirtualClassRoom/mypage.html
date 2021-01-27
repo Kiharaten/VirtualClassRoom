@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    {% comment %} <meta name="viewport" content="width=device-width, initial-scale=1.0"> {% endcomment %}
+    <!-- fit apple PWA -->
+    <meta name="viewport" content="viewport-fit=cover,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="テストサイト">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/howl.jpg">
+
+    <!-- page design -->
+    <link rel="stylesheet" href="{% static "VirtualClassRoom/css/ress.css" %}">
+    <link rel="stylesheet" href="{% static "VirtualClassRoom/css/header.css" %}">
+    <link rel="stylesheet" href="{% static "VirtualClassRoom/css/footer.css" %}">
+    <link rel="stylesheet" href="{% static "VirtualClassRoom/css/mypage.css" %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <!-- page script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/function.js"></script>
+
+    <!-- title -->
+    <title>{{ title }}</title>
+</head>
+<body>
+
+    <header>
+        <div class="contents">
+            <h1>VirtualClassRoom</h1>
+            {% comment %} <navi>
+                <button type="submit" value="" class="button" onclick="location.href='https://techacademy.jp/magazine/'">A</button>
+                <button type="submit" value="" class="button" onclick="location.href='https://techacademy.jp/magazine/'">B</button>
+                <button type="submit" value="" class="button" onclick="location.href='https://techacademy.jp/magazine/'">C</button>
+                <button type="submit" value="" class="button" onclick="location.href='https://techacademy.jp/magazine/'">D</button>
+            </navi> {% endcomment %}
+
+            <form action="{% url 'VirtualClassRoom:mypage' %}" method="post" id="form">
+                <button type="submit" value="" name="hogehoge1" class="button">A</button>
+                <button type="submit" value="" name="hogehoge2" class="button">B</button>
+                <button type="submit" value="" name="hogehoge3" class="button">C</button>
+                <button type="submit" value="" name="hogehoge4" class="button">D</button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <h1>{{ h1 }}</h1>
+        <p>// ----- ----- ----- ----- -----hogehoge1----- ----- ----- ----- ----- //</p>
+        {% comment %} <p><img src="https://media.giphy.com/media/SVvKg1HOsPVZK/giphy.gif"></p> {% endcomment %}
+        
+        <p><br>
+            ここがページ１です。<br>
+            ボタンのAとリンクしてます。
+        </p><br>
+
+        <p><a href="{% url 'VirtualClassRoom:login' %}" >loginへ移動</a></p>
+
+
+
+        {% comment %} <form action="{% url 'VirtualClassRoom:mypage' %}" method="post">
+            {% csrf_token %}
+            {% for choice in question.choice_set.all %}
+                <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+                <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+            {% endfor %}
+            <input type="text" name="name" placeholder="名前を入力">
+            <input type="text" name="name" placeholder="名前を入力">
+            <input type="submit" value="Vote">
+        </form> {% endcomment %}
+
+        <form action="{% url 'VirtualClassRoom:mypage' %}" method="get">
+            {% csrf_token %}
+            <ul>
+                <li>名前：<input type="text" name="name" placeholder="名前を入力"></input></li>
+                <li>年齢：<input type="text" name="age" placeholder="年齢を入力"></input></li>
+                <li>性別：<input type="text" name="gender" placeholder="性別を入力"></input></li>
+                <li>住所：<input type="text" name="address" placeholder="住所を入力"></input></li>
+            </ul>
+            <button type="submit" name="switch_process_with_button_name">送信</button>
+        </form>
+        {{ print(page_name) }}
+
+
+        {% comment %} <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d840136.4316424426!2d134.85887106070368!3d34.66018441087177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e86b2acc70d7%3A0xa399ff48811f596d!2z5aSn6Ziq5bqc!5e0!3m2!1sja!2sjp!4v1581666550791!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe> {% endcomment %}
+        <p>// ----- ----- ----- ----- -----hogehoge1----- ----- ----- ----- ----- //</p>
+    </main>
+
+    <footer>
+        <div class="contents">
+            <navi>
+                <button type="submit" value="" class="button" onclick="location.href='https://techacademy.jp/magazine/'">E</button>
+                <button type="submit" value="" class="button" onclick="location.href='https://techacademy.jp/magazine/'">F</button>
+                <button type="submit" value="" class="button" onclick="location.href='https://techacademy.jp/magazine/'">G</button>
+                <button type="submit" value="" class="button" onclick="location.href='https://techacademy.jp/magazine/'">H</button>
+            </navi>
+        </div>
+    </footer>
+
+<script>
+    $(".show").hide();
+    $(".show").delay(600).fadeIn('slow');
+</script>
+</body>
+</html>
+
+{% comment %} {{ response }} で文字列出力可能 {% endcomment %}
+{% comment %} {% if a == 1 : print("hoge") %} で分岐可能{% endcomment %}
