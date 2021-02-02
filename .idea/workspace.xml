@@ -20,13 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1730b56-1e36-4eeb-a27c-9004fc9428a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/parent/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VirtualClassRoom/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/VirtualClassRoom/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parent/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/parent/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parent/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/parent/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VirtualClassRoom/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/VirtualClassRoom/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configure/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/configure/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

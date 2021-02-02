@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'student.apps.StudentConfig',
+    'parent.apps.ParentConfig',
+    'configure.apps.ConfigureConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
