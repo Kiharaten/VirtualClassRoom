@@ -21,9 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f1730b56-1e36-4eeb-a27c-9004fc9428a4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VirtualClassRoom/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/VirtualClassRoom/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/VirtualClassRoom/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VirtualClassRoom/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/VirtualClassRoom/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +108,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="147" y="73" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612245739943">
+      <screen x="0" y="23" width="1680" height="961" />
+    </state>
+    <state x="147" y="73" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.961@0.23.1680.961" timestamp="1612245739943" />
     <state width="819" height="319" key="GridCell.Tab.0.bottom" timestamp="1612245076682">
       <screen x="0" y="23" width="1680" height="961" />
     </state>
