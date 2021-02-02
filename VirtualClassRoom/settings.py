@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ssb5rnw@rjahrrvg*cmhxwm*+6(myx-y0)3_66ow!l9j#&&l2y'
+SECRET_KEY = 'a1e_=mp_x&r_k%f0a@%4hw&8f5qss!veflo^v@9xz(s5gru&*6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -76,14 +76,11 @@ WSGI_APPLICATION = 'VirtualClassRoom.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'VirtualClassRoom',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'OPTIONS': {
+            # 'read_default_file': '/path/to/my.cnf',
+        },
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
