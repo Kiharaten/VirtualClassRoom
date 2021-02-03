@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>{{ fixed.sitename }} | {{ fixed.title }}</title>
+</head>
+<body>
+    <header>
+        <h1>{{ fixed.sitename }}</h1>
+        <h2>{{ fixed.title }}</h2>
+    </header>
+
+    <main>
+
+    </main>
+
+    <footer>
+        <ul>
+        {% for key, column in nav.items %}
+            <li><a href="{% url key %}">{{ column }}</a></li>
+        {% endfor %}
+        </ul>
+    </footer>
+</body>
+</html>

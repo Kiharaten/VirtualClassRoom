@@ -1,15 +1,34 @@
-# from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import get_object_or_404, render
+
+context = {
+    'fixed': {
+        'sitename': '遠隔授業システム',
+        'title': '',
+    },
+    'nav':{
+        'payment':'お支払い情報',
+        'status':'学習状況',
+        'notice':'お知らせ',
+    }
+}
 
 # Create your views here.
 def index(request):
-    return HttpResponse("you can login from here.")
+    context["fixed"]["title"] = "login"
+    return render(request, 'parent/login.html', context)
+    # return HttpResponse("you can login from here.")
 
 def payment(request):
-    return HttpResponse("you can check payment from here.")
+    context["fixed"]["title"] = context["nav"]["payment"]
+    return render(request, 'parent/payment.html', context)
+    # return HttpResponse("you can join classroom from here.")
 
 def status(request):
-    return HttpResponse("you can see status from here.")
+    context["fixed"]["title"] = context["nav"]["status"]
+    return render(request, 'parent/status.html', context)
+    # return HttpResponse("you can see archive from here.")
 
 def notice(request):
-    return HttpResponse("you can check notice here.")
+    context["fixed"]["title"] = context["nav"]["notice"]
+    return render(request, 'parent/notice.html', context)
+    # return HttpResponse("you can check mypage here.")
