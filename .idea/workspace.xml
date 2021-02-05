@@ -19,6 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="f1730b56-1e36-4eeb-a27c-9004fc9428a4" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/parent/static/parent/css/destyle.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/parent/templates/parent/template.html" afterDir="false" />
@@ -40,6 +41,9 @@
       <change beforePath="$PROJECT_DIR$/student/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/views.py" afterDir="false" />
 >>>>>>> 6f019fe86cc332494217d28ceeaa7da9e19110ad
     </list>
+=======
+    <list default="true" id="f1730b56-1e36-4eeb-a27c-9004fc9428a4" name="Default Changelist" comment="" />
+>>>>>>> develop
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
