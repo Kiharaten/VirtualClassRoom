@@ -1,26 +1,18 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    {% load static %}
-    <meta charset="UTF-8">
-    <title>{{ fixed.sitename }} | {{ fixed.title }}</title>
-</head>
-<body>
-    <header>
-        <h1>{{ fixed.sitename }}</h1>
-        <h2>{{ fixed.title }}</h2>
-    </header>
+{% extends "student/template.html" %}
 
-    <main>
-
-    </main>
-
-    <footer>
+{% block main %}
         <ul>
-        {% for key, column in nav.items %}
-            <li><a href="{% url key %}">{{ column }}</a></li>
+        {% for num, column in join.list.items %}
+            <a href="{{ num }}"><li>
+                <ul>
+                {% for value in column.values %}
+                    <li>{{ value }}</li>
+                {% endfor %}
+                </ul>
+            </li></a>
+
+            <br>
+
         {% endfor %}
         </ul>
-    </footer>
-</body>
-</html>
+{% endblock %}
