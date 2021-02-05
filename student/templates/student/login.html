@@ -13,5 +13,5 @@
 
 {% block footer %}
 <a href="">{{ login.student }}</a>
-<a href="">{{ login.parent }}</a>
+<a href="{% url 'index' %}">{{ login.parent }}</a>
 {% endblock %}

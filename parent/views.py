@@ -9,8 +9,8 @@ context = {
         'username':'ユーザー名を入力',
         'password':'パスワードを入力',
         'login':'ログイン',
-        'student':'生徒ログイン',
         'parent':'保護者ログイン',
+        'student':'生徒ログイン',
         'help':'ログインできない場合',
     },
     'nav':{
@@ -23,6 +23,9 @@ context = {
 # Create your views here.
 def index(request):
     return render(request, 'parent/login.html', context)
+
+# def login(request):
+#     return render(request, 'student/login,html', context)
 
 def help(request):
     return render(request, 'parent/login.html', context)

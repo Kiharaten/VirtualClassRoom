@@ -84,6 +84,9 @@ context = {
 def index(request):
     return render(request, 'student/login.html', context)
 
+# def login(request):
+#     return render(request, 'student/login,html', context)
+
 def help(request):
     return render(request, 'student/help.html', context)
 
