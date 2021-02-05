@@ -1,0 +1,18 @@
+{% extends "student/template.html" %}
+
+{% block main %}
+        <ul>
+        {% for num, column in join.list.items %}
+            <a href="{{ num }}"><li>
+                <ul>
+                {% for value in column.values %}
+                    <li>{{ value }}</li>
+                {% endfor %}
+                </ul>
+            </li></a>
+
+            <br>
+
+        {% endfor %}
+        </ul>
+{% endblock %}
