@@ -1,28 +1,17 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ fixed.sitename }} | {{ fixed.title }}</title>
-</head>
-<body>
-    <header>
-        <h1>{{ fixed.sitename }}</h1>
-        <h2>{{ fixed.title }}</h2>
-    </header>
+{% extends "student/template.html" %}
 
-    <main>
-        <form action="" method="post">
-            {% csrf_token %}
-            <input type="text" name="username" placeholder="{{ login.username }}"><br>
-            <input type="password" name="password" placeholder="{{ login.password}}"><br>
-            <input type="submit" value="{{ login.login }}">
-        </form>
-        <a href="">{{ login.help }}</a>
-    </main>
+{% block main %}
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="{{ login.username }}"><br>
+    <input type="password" name="password" placeholder="{{ login.password}}"><br>
+    {% comment %}<input type="submit" value="{{ login.login }}">{% endcomment %}
+    <a href="{% url 'join' %}">{{ login.login }}</a>
+</form>
+ <a href="{% url 'help' %}">{{ login.help }}</a>
+{% endblock %}
 
-    <footer>
-        <a href="">{{ login.student }}</a>
-        <a href="">{{ login.parent }}</a>
-    </footer>
-</body>
-</html>
+{% block footer %}
+<a href="">{{ login.student }}</a>
+<a href="">{{ login.parent }}</a>
+{% endblock %}
