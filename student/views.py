@@ -9,6 +9,7 @@ context = {
         'username':'ユーザー名を入力',
         'password':'パスワードを入力',
         'login':'ログイン',
+        'path':'/parent/',
         'student':'生徒ログイン',
         'parent':'保護者ログイン',
         'help':'ログインできない場合',
