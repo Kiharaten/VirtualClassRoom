@@ -9,6 +9,7 @@
     <a href="{% url 'payment' %}">{{ login.login }}</a>
 </form>
 <a href="{% url 'help' %}">{{ login.help }}</a>
+{% comment %}<a href="/configure/help">{{ login.help }}</a>{% endcomment %}
 {% endblock %}
 
 {% block footer %}

@@ -2,7 +2,7 @@
 {% block main %}
         <ul>
         {% for num, column in archive.list.items %}
-            <a href="num"><li>
+            <a href="{{ num }}"><li>
                 <ul>
                 {% for value in column.values %}
                     <li>{{ value }}</li>
