@@ -89,8 +89,8 @@ def index(request):
 # def login(request):
 #     return render(request, 'student/login.html', context)
 
-def help(request):
-    return render(request, 'student/help.html', context)
+# def help(request):
+#     return render(request, 'student/help.html', context)
 
 def join(request):
     context["fixed"]["title"] = context["nav"]["join"]

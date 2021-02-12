@@ -56,8 +56,8 @@ def index(request):
 # def login(request):
 #     return render(request, 'student/login,html', context)
 
-def help(request):
-    return render(request, 'parent/login.html', context)
+# def help(request):
+#     return render(request, 'parent/login.html', context)
 
 def payment(request):
     context["fixed"]["title"] = context["nav"]["payment"]
