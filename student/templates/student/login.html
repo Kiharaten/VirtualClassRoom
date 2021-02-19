@@ -9,9 +9,10 @@
     <a href="{% url 'join' %}">{{ login.login }}</a>
 </form>
  <a href="{% url 'help' %}">{{ login.help }}</a>
+{% comment %}<a href="/configure/help">{{ login.help }}</a>{% endcomment %}
 {% endblock %}
 
 {% block footer %}
 <a href="">{{ login.student }}</a>
-<a href="">{{ login.parent }}</a>
+<a href="/parent/">{{ login.parent }}</a>
 {% endblock %}

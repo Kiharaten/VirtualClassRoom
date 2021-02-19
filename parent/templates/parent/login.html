@@ -5,12 +5,14 @@
     {% csrf_token %}
     <input type="text" name="username" placeholder="{{ login.username }}"><br>
     <input type="password" name="password" placeholder="{{ login.password}}"><br>
-    <input type="submit" value="{{ login.login }}">
+    {% comment %}<input type="submit" value="{{ login.login }}">{% endcomment %}
+    <a href="{% url 'payment' %}">{{ login.login }}</a>
 </form>
-<a href="">{{ login.help }}</a>
+<a href="{% url 'help' %}">{{ login.help }}</a>
+{% comment %}<a href="/configure/help">{{ login.help }}</a>{% endcomment %}
 {% endblock %}
 
 {% block footer %}
-<a href="">{{ login.student }}</a>
+<a href="/student/">{{ login.student }}</a>
 <a href="">{{ login.parent }}</a>
 {% endblock %}

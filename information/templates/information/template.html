@@ -3,7 +3,7 @@
 <head>
     {% load static %}
     <meta charset="UTF-8">
-<!--    <link href="{% static 'student/css/destyle.css' %}" rel="stylesheet" type="text/css">-->
+    <link href="{% static 'information/css/destyle.css' %}" rel="stylesheet" type="text/css">
     <title>{% block title %}{{ fixed.sitename }} | {{ fixed.title }}{% endblock %}</title>
 </head>
 <body>
@@ -18,13 +18,13 @@
         {% endblock %}
     </main>
     <footer>
-        {% block footer %}
-        <ul>
-        {% for key, column in nav.items %}
-            <li><a href="{% url key %}">{{ column }}</a></li>
-        {% endfor %}
-        </ul>
-        {% endblock %}
+<!--        {% block footer %}-->
+<!--        <ul>-->
+<!--        {% for key, column in nav.items %}-->
+<!--            <li><a href="{% url key %}">{{ column }}</a></li>-->
+<!--        {% endfor %}-->
+<!--        </ul>-->
+<!--        {% endblock %}-->
     </footer>
 </body>
 </html>
