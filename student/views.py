@@ -9,7 +9,6 @@ context = {
         'username':'ユーザー名を入力',
         'password':'パスワードを入力',
         'login':'ログイン',
-        'path':'/parent/',
         'student':'生徒ログイン',
         'parent':'保護者ログイン',
         'help':'ログインできない場合',
@@ -72,8 +71,7 @@ context = {
     },
     'mypage':{
         'logout':'ログアウト',
-        'username':'木原天',
-        'lank':'A+',
+
     },
     'nav':{
         'join':'講義に参加',
@@ -86,11 +84,8 @@ context = {
 def index(request):
     return render(request, 'student/login.html', context)
 
-# def login(request):
-#     return render(request, 'student/login.html', context)
-
-# def help(request):
-#     return render(request, 'student/help.html', context)
+def help(request):
+    return render(request, 'student/help.html', context)
 
 def join(request):
     context["fixed"]["title"] = context["nav"]["join"]

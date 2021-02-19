@@ -1,10 +1,5 @@
 {% extends "student/template.html" %}
 
 {% block main %}
-<ul>
-    <li>学習ランク{{ mypage.lank }}</li>
-    <li>{{ mypage.username }}さん</li>
-    <li><img src=""></li>
-</ul>
-<a href="/student/">{{ mypage.logout }}</a>
+<a href="{% url 'index' %}">{{ mypage.logout }}</a>
 {% endblock %}
