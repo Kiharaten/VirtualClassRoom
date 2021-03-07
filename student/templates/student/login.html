@@ -1,18 +1,22 @@
 {% extends "student/template.html" %}
 
 {% block main %}
-<form action="" method="post">
+<h1>{{ fixed.sitename }}</h1>
+<h2>{{ fixed.title }}</h2>
+
+<form action="{% url 'login' %}" method="post">
     {% csrf_token %}
     <input type="text" name="username" placeholder="{{ login.username }}"><br>
     <input type="password" name="password" placeholder="{{ login.password}}"><br>
-    {% comment %}<input type="submit" value="{{ login.login }}">{% endcomment %}
-    <a href="{% url 'join' %}">{{ login.login }}</a>
+    <input type="submit" value="{{ login.login }}">
+    <a href="{% url 'help' %}">{{ login.help }}</a>
 </form>
- <a href="{% url 'help' %}">{{ login.help }}</a>
-{% comment %}<a href="/configure/help">{{ login.help }}</a>{% endcomment %}
+
+<form action="{% url 'login' %}" method="get">
+    <button type="submit" value="student" name="login">{{ login.student }}</button>
+    <button type="submit" value="parent" name="login">{{ login.parent }}</button>
+</form>
 {% endblock %}
 
 {% block footer %}
-<a href="">{{ login.student }}</a>
-<a href="/parent/">{{ login.parent }}</a>
 {% endblock %}

@@ -1,18 +1,40 @@
 {% extends "student/template.html" %}
 
 {% block main %}
-        <ul>
+<!--        <ul>-->
+<!--        {% for num, column in join.list.items %}-->
+<!--            <a href="{{ num }}"><li>-->
+<!--                <ul>-->
+<!--                {% for value in column.values %}-->
+<!--                    <li>{{ value }}</li>-->
+<!--                {% endfor %}-->
+<!--                </ul>-->
+<!--            </li></a>-->
+
+<!--            <br>-->
+
+<!--        {% endfor %}-->
+<!--        </ul>-->
+    <form action="" method="get" id="join">
         {% for num, column in join.list.items %}
-            <a href="{{ num }}"><li>
+            <button type="submit" value="{{ num }}" name="id">
                 <ul>
-                {% for value in column.values %}
-                    <li>{{ value }}</li>
-                {% endfor %}
+                    {% for value in column.values %}
+                        <li>{{ value }}</li>
+                    {% endfor %}
                 </ul>
-            </li></a>
-
+            </button>
             <br>
-
         {% endfor %}
-        </ul>
+    </form>
+{% endblock %}
+
+
+{% block footer %}
+    <form action="{% url 'join' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" value="join" name="navi">join</button>
+        <button type="submit" value="archive" name="navi">archive</button>
+        <button type="submit" value="mypage" name="navi">mypage</button>
+    </form>
 {% endblock %}

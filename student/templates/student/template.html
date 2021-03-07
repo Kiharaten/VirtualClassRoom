@@ -3,28 +3,40 @@
 <head>
     {% load static %}
     <meta charset="UTF-8">
+
+    <meta name="viewport" content="viewport-fit=cover,user-scalable=no">
+    {% comment %} appleの設定 {% endcomment %}
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    {% comment %} ホームでのタイトル {% endcomment %}
+    <meta name="apple-mobile-web-app-title" content="遠隔授業">
+    {% comment %} アイコン画像 {% endcomment %}
+    <link rel="apple-touch-icon" sizes="180x180" href="">
+
     <link href="{% static 'student/css/destyle.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'student/css/style.css' %}" rel="stylesheet" type="text/css">
     <title>{% block title %}{{ fixed.sitename }} | {{ fixed.title }}{% endblock %}</title>
 </head>
 <body>
     <header>
-        {% block header %}
-        <h1>{{ fixed.sitename }}</h1>
-        <h2>{{ fixed.title }}</h2>
-        {% endblock %}
+        <div class="contents">
+            {% block header %}
+            {% endblock %}
+        </div><!-- contents -->
     </header>
+
     <main>
-        {% block main %}
-        {% endblock %}
+        <div class="contents">
+            {% block main %}
+            {% endblock %}
+        </div><!-- contents -->
     </main>
+
     <footer>
-        {% block footer %}
-        <ul>
-        {% for key, column in nav.items %}
-            <li><a href="{% url key %}">{{ column }}</a></li>
-        {% endfor %}
-        </ul>
-        {% endblock %}
+        <div class="contents">
+            {% block footer %}
+            {% endblock %}
+        </div><!-- contents -->
     </footer>
 </body>
 </html>

@@ -21,6 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="cc868e04-ace1-4ef6-80d0-af94d3989612" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VirtualClassRoom/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/VirtualClassRoom/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/static/student/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/student/static/student/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/templates/student/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/student/templates/student/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/templates/student/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/student/templates/student/template.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,5 +81,20 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="840" y="23" width="840" height="960" key="dock-window-1" timestamp="1613707121106">
+      <screen x="0" y="23" width="1680" height="961" />
+    </state>
+    <state x="840" y="23" width="840" height="960" key="dock-window-1/0.23.1680.961@0.23.1680.961" timestamp="1613707121106" />
+    <state x="0" y="23" width="840" height="957" key="dock-window-2" timestamp="1614651018560">
+      <screen x="0" y="23" width="1680" height="957" />
+    </state>
+    <state x="0" y="23" width="840" height="957" key="dock-window-2/0.23.1680.957@0.23.1680.957" timestamp="1614651018560" />
+    <state x="0" y="23" width="840" height="960" key="dock-window-2/0.23.1680.961@0.23.1680.961" timestamp="1613707121107" />
+    <state x="505" y="234" width="670" height="676" key="search.everywhere.popup" timestamp="1613706749787">
+      <screen x="0" y="23" width="1680" height="961" />
+    </state>
+    <state x="505" y="234" width="670" height="676" key="search.everywhere.popup/0.23.1680.961@0.23.1680.961" timestamp="1613706749787" />
   </component>
 </project>

@@ -15,3 +15,12 @@
         {% endfor %}
         </ul>
 {% endblock %}
+
+{% block footer %}
+    <form action="{% url 'join' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" value="join" name="navi">join</button>
+        <button type="submit" value="archive" name="navi">archive</button>
+        <button type="submit" value="mypage" name="navi">mypage</button>
+    </form>
+{% endblock %}

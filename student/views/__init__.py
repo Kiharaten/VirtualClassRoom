@@ -84,17 +84,43 @@ context = {
 
 # Create your views here.
 def index(request):
-    return render(request, 'student/login.html', context)
+    if request.method == "GET":
+        return render(request, 'student/login.html', context)
 
-# def login(request):
-#     return render(request, 'student/login.html', context)
+    if request.method == "POST":
+        if request.POST['navi'] == "join":
+            return join(request)
+        elif request.POST['navi'] == "archive":
+            return archive(request)
+        elif request.POST['navi'] == "mypage":
+            return mypage(request)
+        else:
+            return login(request)
 
-# def help(request):
-#     return render(request, 'student/help.html', context)
+def login(request):
+    if request.method == "GET":
+        if request.GET['login'] == "student":
+            return render(request, 'student/login.html', context)
+        elif request.GET['login'] == "parent":
+            return render(request, 'parent/login.html', context)
+
+    if request.method == "POST":
+        return join(request)
+
+def help(request):
+    return render(request, 'student/help.html', context)
 
 def join(request):
-    context["fixed"]["title"] = context["nav"]["join"]
-    return render(request, 'student/join.html', context)
+    if request.method == "POST":
+        if request.POST['navi'] == "join":
+            context["fixed"]["title"] = context["nav"]["join"]
+            return render(request, 'student/join.html', context)
+        elif request.POST['navi'] == "archive":
+            return archive(request)
+        elif request.POST['navi'] == "mypage":
+            return mypage(request)
+        else:
+            return login(request)
 
 def archive(request):
     context["fixed"]["title"] = context["nav"]["archive"]
